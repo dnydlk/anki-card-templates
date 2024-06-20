@@ -1,0 +1,95 @@
+<!-- 
+  Anki card Template by Daniyal Dolkun
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- - Front - -->
+    <div class="content">
+      <div id="deck">{{Deck}}</div>
+
+      <div id="question">{{Question}}</div>
+
+      <div id="from">{{from}}</div>
+
+      <!-- - Back - -->
+      <hr id="answer" />
+      <div id="answers">{{Answer}}</div>
+
+      <div id="eg">{{E.g.}}</div>
+
+      <div id="code">{{Code}}</div>
+
+      <div id="source">{{Source}}</div>
+
+      {{#Tags}}
+      <div class="tags">{{Tags}}</div>
+      {{/Tags}}
+    </div>
+
+    <script>
+      // !IMPORTANT: The BELOW script is for testing purposes only, don't put it in Anki
+      // Function to replace text content
+      function replaceTextContent(elementId, newText) {
+        let element = document.getElementById(elementId)
+        if (element) {
+          element.innerText = newText
+        }
+      }
+      // Example replacements
+      replaceTextContent("deck", "Default Deck")
+      replaceTextContent(
+        "question",
+        "Question duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+      )
+      replaceTextContent("from", "Example SourceExample")
+      replaceTextContent(
+        "answers",
+        "Answer labore nisi id adipisicing amet pariatur elit exercitation proident incididunt culpa quis deserunt id exercitation."
+      )
+      replaceTextContent(
+        "eg",
+        "E.g. duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+      )
+      replaceTextContent(
+        "code",
+        "Code duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+      )
+      replaceTextContent("source", "Example SourceExample")
+      // !IMPORTANT: The ABOVE script is for testing purposes only, don't put it in Anki
+
+      // Split hierarchical tags
+      var tagsContainerEl = document.querySelectorAll(".tags > *")
+      if (tagsContainerEl.length > 0) {
+        var tags = []
+        tagsContainerEl.forEach((tagEl) => {
+          tagEl.classList.add("scripted-tags")
+          tags.push(tagEl.innerHTML)
+          tags.forEach((tag) => {
+            var childTag = tag.split("::").filter(Boolean)
+            tagEl.innerHTML = childTag[childTag.length - 1].trim()
+          })
+        })
+      } else {
+        tagsContainerEl = document.querySelector(".tags")
+        var tags = tagsContainerEl.innerHTML.split(" ").filter(Boolean)
+        var html = ""
+        tags.forEach((tag) => {
+          var childTag = tag.split("::").filter(Boolean)
+          html += "<span class='scripted-tags'>" + childTag[childTag.length - 1] + "</span>"
+        })
+        tagsContainerEl.innerHTML = html
+      }
+    </script>
+  </body>
+</html>

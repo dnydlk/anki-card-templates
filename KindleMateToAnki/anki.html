@@ -1,0 +1,119 @@
+<!-- 
+  Anki card Template by Daniyal Dolkun
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="anki.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <div id="deck">{{Deck}}</div>
+
+        <div id="word">{{Word}}</div>
+
+        <div id="part-of-speech">{{Part of Speech}}</div>
+
+        <div id="sentence">{{Sentence}}</div>
+
+        <div id="source">{{Source}}</div>
+
+        <hr id="answer" />
+
+        <div id="phonetic-symbol">{{Phonetic Symbol}}</div>
+
+        <div id="vocabulary-com">{{Vocabulary.com}}</div>
+
+        <div id="mdx-definition">{{Mdx Definition}}</div>
+
+        <div id="notes">{{Notes}}</div>
+
+        {{#Tags}}
+        <div class="tags">{{Tags}}</div>
+        {{/Tags}}
+
+        <div id="audio">{{Audio}}</div>
+      </div>
+      <script>
+        // Function to replace text content
+        function replaceTextContent(elementId, newText) {
+          let element = document.getElementById(elementId)
+          if (element) {
+            element.innerText = newText
+          }
+        }
+
+        // Example replacements
+        replaceTextContent("deck", "Default Deck")
+        replaceTextContent("word", "Dictionary")
+        replaceTextContent("part-of-speech", "n.")
+        replaceTextContent(
+          "sentence",
+          "Sentence duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        )
+        replaceTextContent("source", "Example SourceExample")
+        replaceTextContent("phonetic-symbol", "/ˈek.sɑːm.pəl/")
+        replaceTextContent(
+          "vocabulary-com",
+          "Vocabulary.com duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        )
+        replaceTextContent(
+          "mdx-definition",
+          "MDX Definition duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        )
+        replaceTextContent(
+          "notes",
+          "Notes duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        )
+        replaceTextContent(
+          "tags",
+          "Notes duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        )
+        replaceTextContent("audio", "Audio Source Here")
+
+        // Split hierarchical tags
+        var tagsContainerEl = document.querySelectorAll(".tags > *")
+        if (tagsContainerEl.length > 0) {
+          var tags = []
+          tagsContainerEl.forEach((tagEl) => {
+            tagEl.classList.add("scripted-tags")
+            tags.push(tagEl.innerHTML)
+            tags.forEach((tag) => {
+              var childTag = tag.split("::").filter(Boolean)
+              tagEl.innerHTML = childTag[childTag.length - 1].trim()
+            })
+          })
+        } else {
+          tagsContainerEl = document.querySelector(".tags")
+          var tags = tagsContainerEl.innerHTML.split(" ").filter(Boolean)
+          var html = ""
+          tags.forEach((tag) => {
+            var childTag = tag.split("::").filter(Boolean)
+            html += "<span class='scripted-tags'>" + childTag[childTag.length - 1] + "</span>"
+          })
+          tagsContainerEl.innerHTML = html
+        }
+      </script>
+      <script>
+        let deckEl = document.getElementById("deck")
+        let wordEl = document.getElementById("word")
+        let partOfSpeechEl = document.getElementById("part-of-speech")
+        let sentenceEl = document.getElementById("sentence")
+        let sourceEl = document.getElementById("source")
+        let phoneticSymbolEl = document.getElementById("phonetic-symbol")
+        let vocabularyComEl = document.getElementById("vocabulary.com")
+        let mdxDefinitionEl = document.getElementById("mdx-definition")
+        let notesEl = document.getElementById("notes")
+        let tagsEl = document.querySelectorAll(".tags")
+      </script>
+    </div>
+  </body>
+</html>

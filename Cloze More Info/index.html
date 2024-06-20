@@ -1,0 +1,38 @@
+<!-- 
+  Anki card Template by Daniyal Dolkun
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div id="deck">{{Deck}}</div>
+
+      <div id="cloze">{{cloze:Text}}</div>
+
+      <div id="from">{{from}}</div>
+
+      <!--- ---------- Back ---------- --->
+      <hr id="answer" />
+
+      <div id="eg">{{E.g.}}</div>
+
+      <div id="code">{{Code}}</div>
+
+      <div id="source">{{Source}}</div>
+
+      {{#Tags}}
+      <div class="tags">{{Tags}}</div>
+      {{/Tags}}
+    </div>
+  </body>
+</html>

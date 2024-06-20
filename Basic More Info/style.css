@@ -1,0 +1,232 @@
+/*
+  Anki card Template by Daniyal Dolkun
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+*/
+
+:root {
+  /*- --------- Line Heights --------- -*/
+  --content-line-height: 1.4;
+  --content-line-height-back: 1.4;
+
+  /*- ------------- Deck ------------- -*/
+  --deck-margin: -6px 0 0px -4px;
+  --deck-margin-mobile: -8px 0 0px 0px;
+  --deck-font-size: 12px;
+
+  /*- ----------- Question ----------- -*/
+  --question-font-size: 20px;
+  --question-line-height: 1.3;
+
+  /*- ------------- From ------------- -*/
+  --from-font-color: #8c95a7;
+  --from-font-size: 12px;
+  --from-line-height: 1;
+  --from-margin: 8px 0 4px 0;
+
+  /*- -------------- hr -------------- -*/
+  --hr-margin: 12px 0;
+  --hr-margin-mobile: 12px 0 10px 0;
+  --hr-color: #5971a2;
+  --hr-color-night: #d8dee9;
+
+  /*- ------------ Answers ------------ -*/
+  --answers-font-size: 18px;
+
+  /*- ----------- Examples ------------ -*/
+  --e-c-margins: 10px 12px 10px 12px; /* for both e.g. & code */
+  --example-font-size: 18px;
+
+  /*- ------------- Code ------------- -*/
+  --code-font-size: 16px;
+
+  /*- ------------ Source ------------- -*/
+  --source-font-size: 12px;
+  --source-line-height: 1;
+
+  /*- ------------- Tags ---------------*/
+  --tags-margin: 10px 0 -2px 1px;
+  --scripted-tags-font-color: #4c566a;
+  --scripted-tags-font-color-hover: #8fbcbb;
+  --scripted-tags-bg-color-hover: transparent;
+  --scripted-tags-border-hover: #8fbcbb;
+
+  /*- ------------ Color -------------- -*/
+  --card-bg-color: #ececec;
+  --card-bg-color-night: #242933;
+  --content-bg-color: #ffffff;
+  --content-bg-color-night: #2e3440;
+  --font-color: #434c5e;
+  --font-color-night: #e7e9f0;
+  --content-border-color: #e5eef4;
+  --content-border-color-night: #333333;
+
+  --bold-color: #bf616a;
+  --italic-color: #ebcb8b;
+  --bold-italic-color: #d08770;
+  --underline-color: #a3be8c;
+}
+
+.card {
+  margin: 0;
+  background-color: var(--card-bg-color);
+}
+
+.card.nightMode {
+  background-color: var(--card-bg-color-night);
+}
+
+.content {
+  margin: 10px;
+  padding: 10px 15px;
+  border: 1px solid var(--content-border-color);
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: var(--font-color);
+  background-color: var(--content-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.4rem;
+}
+
+.nightMode .content {
+  color: var(--font-color-night);
+  background-color: var(--content-bg-color-night);
+  border: 1px solid var(--content-border-color-night);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mobile .content {
+  margin: 8px;
+  padding: 10px 8px;
+}
+
+.content {
+  line-height: 1.5rem;
+}
+
+/*- ----------- Front Side Content ----------- -*/
+#deck {
+  margin: var(--deck-margin);
+  font-size: var(--deck-font-size);
+}
+
+.mobile #deck {
+  margin: var(--deck-margin-mobile);
+}
+
+#question {
+  font-size: var(--question-font-size);
+  line-height: var(--question-line-height);
+}
+
+#from {
+  margin: var(--from-margin);
+  font-size: var(--from-font-size);
+  font-style: italic;
+  line-height: var(--from-line-height);
+  color: var(--from-font-color);
+}
+
+hr {
+  margin: var(--hr-margin);
+  border: 0.1px solid var(--hr-color);
+}
+
+.nightMode hr {
+  border: 0.1px solid var(--hr-color-night);
+}
+
+.mobile hr {
+  margin: var(--hr-margin-mobile);
+}
+
+/*- ----------- Back Side Content ----------- -*/
+#answers {
+  font-size: var(--answers-font-size);
+}
+
+#eg {
+  margin: var(--e-c-margins);
+  font-family: "Gill Sans";
+  font-size: var(--example-font-size);
+}
+
+#code {
+  margin: var(--e-c-margins);
+  font-family: Menlo;
+  font-size: var(--code-font-size);
+}
+
+#source {
+  text-align: right;
+  font-size: var(--source-font-size);
+  font-style: italic;
+  line-height: var(--source-line-height);
+}
+
+.mobile #source {
+  font-size: 0.7rem;
+}
+
+#source::before {
+  content: "From ";
+}
+
+.tags {
+  margin: var(--tags-margin);
+  padding: 0;
+  width: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: var(--font-size-small);
+}
+
+.scripted-tags {
+  all: initial;
+  background-color: transparent;
+  border: 1px solid #d8dee9;
+  border-radius: 0.25em;
+  color: var(--scripted-tags-font-color);
+  display: inline;
+  font-size: 12px;
+  font-family: Arial;
+  font-style: italic;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.25em;
+  transition: all 0.25s;
+  word-break: break-word;
+}
+
+.scripted-tags:hover {
+  border: 1px solid var(--scripted-tags-border-hover);
+  color: var(--scripted-tags-font-color-hover);
+  background-color: var(--scripted-tags-bg-color-hover);
+  cursor: pointer;
+}
+
+/*- ------------- Text Style Color ------------ -*/
+b,
+strong {
+  color: var(--bold-color);
+}
+
+i,
+em {
+  color: var(--italic-color);
+}
+
+b > i,
+i > b {
+  color: var(--bold-italic-color);
+}
+
+u {
+  color: var(--underline-color);
+}
+
+pre {
+  white-space: normal;
+}

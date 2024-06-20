@@ -1,0 +1,254 @@
+/*
+  Anki card Template by Daniyal Dolkun
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+*/
+
+:root {
+  /*- -------------- Card -------------------- -*/
+  --card-bg-color: #ececec; 
+  --card-bg-color-night: #242933;
+
+  /*- ------------- Content ------------------ -*/
+  --content-border-color: #e5eef4;
+  --content-border-color-night: #333333;
+  --content-bg-color: #ffffff;
+  --content-bg-color-night: #2e3440;
+  --font-color: #434c5e;
+  --font-color-night: #e7e9f0;
+
+  /*- -------------- Deck -------------------- -*/
+  --deck-margin: -6px 0 0px -4px;
+  --deck-margin-mobile: -8px 0 0px 0px;
+  --deck-font-size: 12px;
+
+  /*- -------------- Word -------------------- -*/
+  --word-font-size: 22px;
+  --word-margin: 0 0 4px 0;
+
+  /*- --------- Part of Speech --------------- -*/
+  --pos-font-size: 14px;
+
+  /*- ------------ Sentence ------------------ -*/
+  --sentence-margin: 0 0 4px 0;
+  --sentence-line-height: 1.4;
+
+  /*- ------------- Source ------------------- -*/
+  --source-margin: 0 0 0 0;
+  --source-line-height: 1;
+  --source-font-size: 12px;
+  --source-font-size-mobile: 12px;
+
+  /*- --------------- hr --------------------- -*/
+  --hr-margin: 12px 0;
+  --hr-margin-mobile: 12px 0 10px 0;
+  --hr-color: #5971a2;
+  --hr-color-night: #d8dee9;
+  
+  /*- --------- vocab mdx notes -------------- -*/
+  --vmn-line-height: 1.4;
+  --vmn-margin: 0 0 10px 0;
+
+  /*- --------------- Tags ---------------------*/
+  --tags-margin: 10px 0 -2px 1px;
+  --scripted-tags-font-color: #4c566a;
+  --scripted-tags-font-color-hover: #8fbcbb;
+  --scripted-tags-bg-color-hover: transparent;
+  --scripted-tags-border-hover: #8fbcbb;
+
+  /*- --------------- Color ------------------ -*/
+  --bold-color: #bf616a;
+  --italic-color: #ebcb8b;
+  --bold-italic-color: #d08770;
+  --underline-color: #a3be8c;
+}
+
+.card {
+  margin: 0;
+  background-color: var(--card-bg-color);
+}
+
+.card.nightMode {
+  background-color: var(--card-bg-color-night);
+}
+
+.content {
+  margin: 10px;
+  padding: 10px 15px;
+  border: 1px solid var(--content-border-color);
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: var(--font-color);
+  background-color: var(--content-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.4rem;
+}
+
+.nightMode .content {
+  color: var(--font-color-night);
+  background-color: var(--content-bg-color-night);
+  border: 1px solid var(--content-border-color-night);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mobile .content {
+  margin: 8px;
+  padding: 10px 12px;
+}
+
+.content {
+  line-height: 1.5rem;
+}
+
+/*- ---- Front Side Content ---- -*/
+#deck {
+  margin: var(--deck-margin);
+  font-size: var(--deck-font-size);
+}
+
+.mobile #deck {
+  margin: var(--deck-margin-mobile);
+}
+
+#word {
+  text-align: center;
+  font-size: var(--word-font-size);
+  margin: var(--word-margin);
+}
+
+#part-of-speech {
+  text-align: center;
+  font-size: var(--pos-font-size);
+  font-style: italic;
+}
+
+#sentence {
+  margin: var(--sentence-margin);
+  line-height: var(--sentence-line-height);
+}
+
+#source {
+  margin: var(--source-margin);
+  line-height: var(--source-line-height);
+  font-size: var(--source-font-size);
+  text-align: right;
+}
+
+.mobile #source {
+  font-size: var(--source-font-size-mobile);
+}
+
+#source::before {
+  content: "From ";
+}
+
+/*- ---- Back Side Content ---- -*/
+hr {
+  margin: var(--hr-margin);
+  border: 0.1px solid var(--hr-color);
+}
+
+.nightMode hr {
+  border: 0.1px solid var(--hr-color-night);
+}
+
+.mobile hr {
+  margin: var(--hr-margin-mobile);
+}
+
+#phonetic-symbol {
+  text-align: center;
+}
+
+#vocabulary-com {
+  margin: var(--vmn-margin);
+  line-height: var(--vmn-line-height);
+}
+
+#mdx-definition {
+  margin: var(--vmn-margin);
+  line-height: var(--vmn-line-height);
+}
+
+#notes {
+  margin: var(--vmn-margin);
+  line-height: var(--vmn-line-height);
+}
+
+.tags {
+  margin: var(--tags-margin);
+  padding: 0;
+  width: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: var(--font-size-small);
+}
+
+.scripted-tags {
+  all: initial;
+  background-color: transparent;
+  border: 1px solid #d8dee9;
+  border-radius: 0.25em;
+  color: var(--scripted-tags-font-color);
+  display: inline;
+  font-size: 12px;
+  font-family: Arial;
+  font-style: italic;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.25em;
+  transition: all 0.25s;
+  word-break: break-word;
+}
+
+.scripted-tags:hover {
+  border: 1px solid var(--scripted-tags-border-hover);
+  color: var(--scripted-tags-font-color-hover);
+  background-color: var(--scripted-tags-bg-color-hover);
+  cursor: pointer;
+}
+
+#audio {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.replay-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.replay-button svg circle {
+  stroke: var(--font-color);
+  fill: #e6ecf5;
+}
+
+.replay-button svg path {
+  stroke: #0d47a1;
+  fill: #0d47a1;
+}
+
+b,
+strong {
+  color: var(--bold-color);
+}
+
+i,
+em {
+  color: var(--italic-color);
+}
+
+b > i,
+i > b {
+  color: var(--bold-italic-color);
+}
+
+u {
+  color: var(--underline-color);
+}
+
+pre {
+  white-space: normal;
+}
