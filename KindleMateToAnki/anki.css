@@ -1,17 +1,10 @@
-/*
-  Anki card Template by Daniyal Dolkun
-  dnydlk@proton.me
-
-  Inspired by/Adapted from @pranavdeshai
-  https://github.com/pranavdeshai/anki-prettify
-*/
-
 :root {
   /*- -------------- Card -------------------- -*/
-  --card-bg-color: #ececec; 
+  --card-bg-color: #ececec;
   --card-bg-color-night: #242933;
 
   /*- ------------- Content ------------------ -*/
+  --content-max-width: 600px;
   --content-border-color: #e5eef4;
   --content-border-color-night: #333333;
   --content-bg-color: #ffffff;
@@ -44,9 +37,9 @@
   /*- --------------- hr --------------------- -*/
   --hr-margin: 12px 0;
   --hr-margin-mobile: 12px 0 10px 0;
-  --hr-color: #5971a2;
+  --hr-color: #91a4b9;
   --hr-color-night: #d8dee9;
-  
+
   /*- --------- vocab mdx notes -------------- -*/
   --vmn-line-height: 1.4;
   --vmn-margin: 0 0 10px 0;
@@ -75,8 +68,9 @@
 }
 
 .content {
-  margin: 10px;
+  margin: 10px auto;
   padding: 10px 15px;
+  max-width: var(--content-max-width);
   border: 1px solid var(--content-border-color);
   border-radius: 12px;
   font-family: Arial, Helvetica, sans-serif;
@@ -103,7 +97,7 @@
   line-height: 1.5rem;
 }
 
-/*- ---- Front Side Content ---- -*/
+/*- --------------- Front Side --------------- -*/
 #deck {
   margin: var(--deck-margin);
   font-size: var(--deck-font-size);
@@ -145,7 +139,7 @@
   content: "From ";
 }
 
-/*- ---- Back Side Content ---- -*/
+/*- -------------- Back Side ----------------- -*/
 hr {
   margin: var(--hr-margin);
   border: 0.1px solid var(--hr-color);
@@ -230,6 +224,7 @@ hr {
   fill: #0d47a1;
 }
 
+/*- ------------ Text Style Color ------------ -*/
 b,
 strong {
   color: var(--bold-color);
