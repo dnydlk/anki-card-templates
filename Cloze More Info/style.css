@@ -1,5 +1,6 @@
 /*
-  Anki card Template by Daniyal Dolkun
+  Anki card Template by @dnydlk
+  https://github.com/dnydlk/anki-card-templates
   dnydlk@proton.me
 
   Inspired by/Adapted from @pranavdeshai
@@ -32,7 +33,7 @@
   /*- ---------------- hr ------------------- -*/
   --hr-margin: 12px 0;
   --hr-margin-mobile: 12px 0 10px 0;
-  --hr-color: #5971a2;
+  --hr-color: #91a4b9;
   --hr-color-night: #d8dee9;
 
   /*- --------------- Examples --------------- -*/
@@ -40,11 +41,12 @@
   --example-font-size: 18px;
 
   /*- ---------------- Code ------------------ -*/
+  --code-margins: 10px 20px;
   --code-font-size: 16px;
 
-  /*- --------------- Source ----------------- -*/
-  --source-font-size: 12px;
-  --source-line-height: 1;
+  /*- -------------- Examples ---------------- -*/
+  --eg-margins: -6px 20px 12px;
+  --example-font-size: 18px;
 
   /*- --------------- Tags ------------------- -*/
   --tags-margin: 10px 0 -2px 1px;
@@ -150,16 +152,16 @@ hr {
 }
 
 /*- --------------- Back Side ---------------- -*/
-#eg {
-  margin: var(--e-c-margins);
-  font-family: "Gill Sans";
-  font-size: var(--example-font-size);
-}
-
 #code {
-  margin: var(--e-c-margins);
+  margin: var(--code-margins);
   font-family: Menlo;
   font-size: var(--code-font-size);
+}
+
+#eg {
+  margin: var(--eg-margins);
+  font-family: "Gill Sans";
+  font-size: var(--example-font-size);
 }
 
 #source {
@@ -172,10 +174,11 @@ hr {
 .mobile #source {
   font-size: 0.7rem;
 }
-
+/*
 #source::before {
   content: "From ";
 }
+*/
 
 .tags {
   margin: var(--tags-margin);
