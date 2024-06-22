@@ -1,10 +1,12 @@
 <!-- 
-  Anki card Template by Daniyal Dolkun
+  Anki card Template by @dnydlk
+  https://github.com/dnydlk/anki-card-templates
   dnydlk@proton.me
 
   Inspired by/Adapted from @pranavdeshai
   https://github.com/pranavdeshai/anki-prettify
  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +18,7 @@
   <body>
     <div class="card">
       <div class="content">
+        <!--- ----------- Front ------------- --->
         <div id="deck">{{Deck}}</div>
 
         <div id="word">{{Word}}</div>
@@ -26,6 +29,7 @@
 
         <div id="source">{{Source}}</div>
 
+        <!--- ------------ Back ------------- --->
         <hr id="answer" />
 
         <div id="phonetic-symbol">{{Phonetic Symbol}}</div>
@@ -42,7 +46,9 @@
 
         <div id="audio">{{Audio}}</div>
       </div>
+
       <script>
+        //! The below script is for testing purposes only, DO NOT COPY into Anki.
         // Function to replace text content
         function replaceTextContent(elementId, newText) {
           let element = document.getElementById(elementId)
@@ -78,6 +84,7 @@
           "Notes duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
         )
         replaceTextContent("audio", "Audio Source Here")
+        //! The above script is for testing purposes only, DO NOT COPY into Anki.
 
         // Split hierarchical tags
         var tagsContainerEl = document.querySelectorAll(".tags > *")

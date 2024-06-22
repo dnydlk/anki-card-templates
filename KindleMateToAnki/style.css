@@ -1,3 +1,12 @@
+/*
+  Anki card Template by @dnydlk
+  https://github.com/dnydlk/anki-card-templates
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+*/
+
 :root {
   /*- -------------- Card -------------------- -*/
   --card-bg-color: #ececec;
@@ -134,11 +143,11 @@
 .mobile #source {
   font-size: var(--source-font-size-mobile);
 }
-
+/*
 #source::before {
   content: "From ";
 }
-
+*/
 /*- -------------- Back Side ----------------- -*/
 hr {
   margin: var(--hr-margin);
@@ -160,6 +169,11 @@ hr {
 #vocabulary-com {
   margin: var(--vmn-margin);
   line-height: var(--vmn-line-height);
+}
+/*- -- ITALIC + BOLD only for Vocabulary.com - -*/
+#vocabulary-com i {
+  font-weight: bold;
+  color: var(--bold-color);
 }
 
 #mdx-definition {
