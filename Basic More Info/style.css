@@ -1,5 +1,5 @@
 /*
-  Anki card Template by @dnydlk
+  Anki card Template by Daniyal Dolkun
   https://github.com/dnydlk/anki-card-templates
   dnydlk@proton.me
 
@@ -55,6 +55,9 @@
   --scripted-tags-font-color-hover: #8fbcbb;
   --scripted-tags-bg-color-hover: transparent;
   --scripted-tags-border-hover: #8fbcbb;
+
+  /*- --------------- Images ----------------- -*/
+  --img-width: 80%;
 
   /*- --------------- Font ------------------- -*/
   --card-bg-color: #ececec;
@@ -214,7 +217,7 @@ hr {
 img {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: var(--img-width);
 }
 
 /*- ------------ Text Style Color ------------ -*/
