@@ -68,7 +68,8 @@
   --bold-color: #bf616a;
   --italic-color: #ebcb8b;
   --bold-italic-color: #d08770;
-  --underline-color: #a3be8c;
+  /* --underline-color: #a3be8c; */
+  --underline-color: #9ab484;
 }
 
 .card {
