@@ -218,7 +218,8 @@ hr {
 img {
   display: block;
   margin: 0 auto;
-  width: var(--img-width);
+  /* width: var(--img-width); */
+  max-width: var(--img-width);
 }
 
 /*- ------------ Text Style Color ------------ -*/
