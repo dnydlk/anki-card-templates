@@ -144,11 +144,7 @@
 .mobile #source {
   font-size: var(--source-font-size-mobile);
 }
-/*
-#source::before {
-  content: "From ";
-}
-*/
+
 /*- -------------- Back Side ----------------- -*/
 hr {
   margin: var(--hr-margin);
