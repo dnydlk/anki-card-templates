@@ -39,6 +39,7 @@
 
   /*- ---------------- Code ------------------ -*/
   --code-margins: 10px 20px;
+  --code-margins-mobile: 8px 0px;
   --code-font-size: 16px;
 
   /*- -------------- Examples ---------------- -*/
@@ -162,6 +163,10 @@ hr {
   font-size: var(--code-font-size);
 }
 
+.mobile #code {
+  margin: var(--code-margins-mobile);
+}
+
 #eg {
   margin: var(--eg-margins);
   font-family: "Gill Sans";
@@ -178,11 +183,7 @@ hr {
 .mobile #source {
   font-size: 0.7rem;
 }
-/*
-#source::before {
-  content: "From ";
-}
-*/
+
 .tags {
   margin: var(--tags-margin);
   padding: 0;
