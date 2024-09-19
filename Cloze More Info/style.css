@@ -42,6 +42,7 @@
 
   /*- ---------------- Code ------------------ -*/
   --code-margins: 10px 20px;
+  --code-margins-mobile: 8px 0px;
   --code-font-size: 16px;
 
   /*- -------------- Examples ---------------- -*/
@@ -54,6 +55,9 @@
   --scripted-tags-font-color-hover: #8fbcbb;
   --scripted-tags-bg-color-hover: transparent;
   --scripted-tags-border-hover: #8fbcbb;
+
+  /*- --------------- Images ----------------- -*/
+  --img-width: 80%;
 
   /*- -------------- Colors ------------------ -*/
   --card-bg-color: #ececec;
@@ -129,6 +133,7 @@
 .cloze {
   color: var(--cloze-font-color);
   background-color: var(--cloze-bg-color);
+  font-weight: bold;
 }
 
 #from {
@@ -159,6 +164,10 @@ hr {
   font-size: var(--code-font-size);
 }
 
+.mobile #code {
+  margin: var(--code-margins-mobile);
+}
+
 #eg {
   margin: var(--eg-margins);
   font-family: "Gill Sans";
@@ -175,6 +184,11 @@ hr {
 .mobile #source {
   font-size: 0.7rem;
 }
+/*
+#source::before {
+  content: "From ";
+}
+*/
 
 .tags {
   margin: var(--tags-margin);
