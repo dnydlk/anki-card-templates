@@ -40,6 +40,8 @@
 
         <div id="notes">{{Notes}}</div>
 
+        <div id="chinese-translation">{{hint:Chinese Translation}}</div>
+
         {{#Tags}}
         <div class="tags">{{Tags}}</div>
         {{/Tags}}
@@ -104,7 +106,10 @@
           var html = ""
           tags.forEach((tag) => {
             var childTag = tag.split("::").filter(Boolean)
-            html += "<span class='scripted-tags'>" + childTag[childTag.length - 1] + "</span>"
+            html +=
+              "<span class='scripted-tags'>" +
+              childTag[childTag.length - 1] +
+              "</span>"
           })
           tagsContainerEl.innerHTML = html
         }
