@@ -183,6 +183,10 @@ hr {
   line-height: var(--vmn-line-height);
 }
 
+#chinese-translation {
+  text-align: center;
+}
+
 .tags {
   margin: var(--tags-margin);
   padding: 0;
