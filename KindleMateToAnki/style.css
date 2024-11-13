@@ -123,6 +123,10 @@
   margin: var(--word-margin);
 }
 
+#phonetic-symbol {
+  text-align: center;
+}
+
 #part-of-speech {
   text-align: center;
   font-size: var(--pos-font-size);
@@ -144,7 +148,11 @@
 .mobile #source {
   font-size: var(--source-font-size-mobile);
 }
-
+/*
+#source::before {
+  content: "From ";
+}
+*/
 /*- -------------- Back Side ----------------- -*/
 hr {
   margin: var(--hr-margin);
@@ -159,10 +167,6 @@ hr {
   margin: var(--hr-margin-mobile);
 }
 
-#phonetic-symbol {
-  text-align: center;
-}
-
 #vocabulary-com {
   margin: var(--vmn-margin);
   line-height: var(--vmn-line-height);
@@ -170,7 +174,7 @@ hr {
 /*- -- ITALIC + BOLD only for Vocabulary.com - -*/
 #vocabulary-com i {
   font-weight: bold;
-  color: var(--bold-color);
+  color: var(--bold-italic-color);
 }
 
 #mdx-definition {
