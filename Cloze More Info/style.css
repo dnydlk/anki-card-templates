@@ -184,11 +184,6 @@ hr {
 .mobile #source {
   font-size: 0.7rem;
 }
-/*
-#source::before {
-  content: "From ";
-}
-*/
 
 .tags {
   margin: var(--tags-margin);
