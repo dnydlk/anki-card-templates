@@ -39,7 +39,7 @@
 
   /*- ------------- Source ------------------- -*/
   --source-margin: 0 0 0 0;
-  --source-line-height: 1;
+  --source-line-height: 1.1;
   --source-font-size: 12px;
   --source-font-size-mobile: 12px;
 
@@ -143,6 +143,10 @@
   line-height: var(--source-line-height);
   font-size: var(--source-font-size);
   text-align: right;
+}
+
+#source * {
+  color: var(--font-color) !important;
 }
 
 .mobile #source {
