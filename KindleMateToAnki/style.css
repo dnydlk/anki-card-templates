@@ -30,7 +30,11 @@
   --word-font-size: 22px;
   --word-margin: 0 0 0px 0;
 
+  /*- ----------- Phonetic Symbol ------------ -*/
+  --ps-margin: 0 0 0 26px;
+
   /*- --------- Part of Speech --------------- -*/
+  --pos-margin: 0 0 0 16px;
   --pos-font-size: 14px;
 
   /*- ------------ Sentence ------------------ -*/
@@ -49,9 +53,9 @@
   --hr-color: #91a4b9;
   --hr-color-night: #d8dee9;
 
-  /*- --------- vocab mdx notes -------------- -*/
-  --vmn-line-height: 1.4;
-  --vmn-margin: 0 0 10px 0;
+  /*- vocabulary.com, mdx definitions & notes --*/
+  --definitions-margin: 0 0 10px 0;
+  --difinitions-line-height: 1.4;
 
   /*- --------------- Tags ---------------------*/
   --tags-margin: 10px 0 -2px 1px;
@@ -107,7 +111,6 @@
   line-height: 1.5rem;
 }
 
-/*- --------------- Front Side --------------- -*/
 #deck {
   margin: var(--deck-margin);
   font-size: var(--deck-font-size);
@@ -123,11 +126,18 @@
   margin: var(--word-margin);
 }
 
+.flex-box {
+  display: flex;
+  justify-content: center;
+}
+
 #phonetic-symbol {
+  margin: var(--ps-margin);
   text-align: center;
 }
 
 #part-of-speech {
+  margin: var(--pos-margin);
   text-align: center;
   font-size: var(--pos-font-size);
   font-style: italic;
@@ -168,8 +178,8 @@ hr {
 }
 
 #vocabulary-com {
-  margin: var(--vmn-margin);
-  line-height: var(--vmn-line-height);
+  margin: var(--definitions-margin);
+  line-height: var(--difinitions-line-height);
 }
 /*- -- ITALIC + BOLD only for Vocabulary.com - -*/
 #vocabulary-com i {
@@ -178,13 +188,13 @@ hr {
 }
 
 #mdx-definition {
-  margin: var(--vmn-margin);
-  line-height: var(--vmn-line-height);
+  margin: var(--definitions-margin);
+  line-height: var(--difinitions-line-height);
 }
 
 #notes {
-  margin: var(--vmn-margin);
-  line-height: var(--vmn-line-height);
+  margin: var(--definitions-margin);
+  line-height: var(--difinitions-line-height);
 }
 
 #chinese-translation {
