@@ -1,0 +1,68 @@
+<!-- 
+  Anki card Template by @dnydlk
+  https://github.com/dnydlk/anki-card-templates
+  dnydlk@proton.me
+
+  Inspired by/Adapted from @pranavdeshai
+  https://github.com/pranavdeshai/anki-prettify
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <!--- ----------------- Front ------------------- --->
+      <div class="content">
+        <div id="deck">{{Deck}}</div>
+
+        <div id="word">{{edit:Word}}</div>
+
+        <div id="part-of-speech">{{edit:Part of Speech}}</div>
+
+        <div id="sentence">{{edit:Sentence}}</div>
+
+        <div id="source">{{Source}}</div>
+      </div>
+
+      <script>
+        //! The below script is for testing purposes only, DO NOT COPY into Anki.
+        // Function to replace text content
+        function replaceTextContent(elementId, newText) {
+          let element = document.getElementById(elementId)
+          if (element) {
+            element.innerHTML = newText
+          }
+        }
+
+        // Example replacements
+        replaceTextContent("deck", "Default Deck")
+        replaceTextContent("word", "Dictionary")
+        replaceTextContent("part-of-speech", "n.")
+        replaceTextContent(
+          "sentence",
+          "Sentence duis <b>veniam</b> sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        )
+        replaceTextContent("source", "Example SourceExample")
+        //! The above script is for testing purposes only, DO NOT COPY into Anki.
+      </script>
+      <script>
+        let deckEl = document.getElementById("deck")
+        let wordEl = document.getElementById("word")
+        let partOfSpeechEl = document.getElementById("part-of-speech")
+        let sentenceEl = document.getElementById("sentence")
+        let sourceEl = document.getElementById("source")
+        let phoneticSymbolEl = document.getElementById("phonetic-symbol")
+        let vocabularyComEl = document.getElementById("vocabulary.com")
+        let mdxDefinitionEl = document.getElementById("mdx-definition")
+        let notesEl = document.getElementById("notes")
+        let tagsEl = document.querySelectorAll(".tags")
+      </script>
+    </div>
+  </body>
+</html>

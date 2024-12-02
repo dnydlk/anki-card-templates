@@ -13,31 +13,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="anki.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="card">
       <div class="content">
-        <!--- ----------------- Front ------------------- --->
+        <!--- ------------------ Back ------------------- --->
         <div id="deck">{{Deck}}</div>
 
-        <div id="word">{{Word}}</div>
+        <div id="word">{{edit:Word}}</div>
 
-        <div id="part-of-speech">{{Part of Speech}}</div>
+        <div class="flex-box">
+          <div id="phonetic-symbol">{{edit:Phonetic Symbol}}</div>
+          <div id="part-of-speech">{{edit:Part of Speech}}</div>
+        </div>
 
-        <div id="sentence">{{Sentence}}</div>
+        <div id="sentence">{{edit:Sentence}}</div>
 
         <div id="source">{{Source}}</div>
 
-        <!--- ------------------ Back ------------------- --->
         <!-- <hr id="answer" /> -->
         <hr />
 
-        <div id="phonetic-symbol">{{Phonetic Symbol}}</div>
-
         <div id="vocabulary-com">{{edit:Vocabulary.com}}</div>
 
-        <div id="mdx-definition">{{Mdx Definition}}</div>
+        <div id="mdx-definition">{{edit:Mdx Definition}}</div>
 
         <div id="notes">{{Notes}}</div>
 
@@ -54,7 +54,7 @@
         function replaceTextContent(elementId, newText) {
           let element = document.getElementById(elementId)
           if (element) {
-            element.innerText = newText
+            element.innerHTML = newText
           }
         }
 
@@ -64,13 +64,13 @@
         replaceTextContent("part-of-speech", "n.")
         replaceTextContent(
           "sentence",
-          "Sentence duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+          "Sentence duis <b>veniam</b> sit nisi <i>excepteur</i> ex nisi eu culpa ex sint nisi ullamco ut consequat."
         )
         replaceTextContent("source", "Example SourceExample")
         replaceTextContent("phonetic-symbol", "/ˈek.sɑːm.pəl/")
         replaceTextContent(
           "vocabulary-com",
-          "Vocabulary.com duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+          "Vocabulary.com duis veniam sit nisi <i>excepteur</i> ex nisi eu culpa ex sint nisi ullamco ut consequat."
         )
         replaceTextContent(
           "mdx-definition",
@@ -78,7 +78,7 @@
         )
         replaceTextContent(
           "notes",
-          "Notes duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+          "Notes duis veniam sit nisi <u>excepteur</u> ex nisi eu culpa ex sint nisi ullamco ut consequat."
         )
         replaceTextContent(
           "tags",
