@@ -6,23 +6,17 @@
   Inspired by/Adapted from @pranavdeshai
   https://github.com/pranavdeshai/anki-prettify
  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BasicMoreInfo Back</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="content">
-      <!--- ----------- Front-------------- --->
-      <div id="deck">{{Deck}}</div>
-
-      <div id="question">{{edit:Question}}</div>
-
-      <div id="from">{{from}}</div>
-
       <!--- ------------ Back ------------- --->
       <!-- <hr id="answer" /> -->
       <hr />
@@ -90,9 +84,7 @@
         tags.forEach((tag) => {
           var childTag = tag.split("::").filter(Boolean)
           html +=
-            "<span class='scripted-tags'>" +
-            childTag[childTag.length - 1] +
-            "</span>"
+            "<span class='scripted-tags'>" + childTag[childTag.length - 1] + "</span>"
         })
         tagsContainerEl.innerHTML = html
       }
