@@ -246,3 +246,15 @@ u {
 pre {
   white-space: pre-wrap;
 }
+
+code {
+  background-color: #eee;
+  font-family: courier, monospace;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.nightMode code {
+  background-color: #23272e;
+  color: #acb2be;
+}
