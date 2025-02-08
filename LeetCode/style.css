@@ -24,9 +24,6 @@
 
   /*- ---------------- From ------------------ -*/
   --from-font-color: #8c95a7;
-  --from-font-size: 12px;
-  --from-line-height: 1;
-  --from-margin: 8px 0 4px 0;
 
   /*- ------------------ hr ------------------ -*/
   --hr-margin: 12px 0;
@@ -117,6 +114,11 @@
 }
 
 /*- ---------------- Front Side -------------- -*/
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 #deck {
   margin: var(--deck-margin);
   font-size: var(--deck-font-size);
@@ -126,18 +128,17 @@
   margin: var(--deck-margin-mobile);
 }
 
+#from {
+  margin: var(--deck-margin);
+  font-size: var(--deck-font-size);
+  font-style: italic;
+  color: var(--from-font-color);
+  text-align: right;
+}
+
 #question {
   font-size: var(--question-font-size);
   line-height: var(--question-line-height);
-}
-
-#from {
-  margin: var(--from-margin);
-  font-size: var(--from-font-size);
-  font-style: italic;
-  line-height: var(--from-line-height);
-  color: var(--from-font-color);
-  text-align: right;
 }
 
 hr {
