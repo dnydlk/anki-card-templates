@@ -12,7 +12,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>KindleMateToAnki Back</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -106,9 +106,7 @@
           tags.forEach((tag) => {
             var childTag = tag.split("::").filter(Boolean)
             html +=
-              "<span class='scripted-tags'>" +
-              childTag[childTag.length - 1] +
-              "</span>"
+              "<span class='scripted-tags'>" + childTag[childTag.length - 1] + "</span>"
           })
           tagsContainerEl.innerHTML = html
         }
