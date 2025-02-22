@@ -241,6 +241,10 @@ a {
   cursor: pointer;
 }
 
+li {
+  line-height: 1.2;
+}
+
 /*- ------------ Text Style Color ------------ -*/
 b,
 strong {
