@@ -25,7 +25,7 @@
   --hr-margin-mobile: 12px 0 10px 0;
 
   /*- --------------- Pointers --------------- -*/
-  --pointer-margin: 0px 0px 4px 0px;
+  --pointer-margin: 16px 0px;
 
   /*- --------------- Answers ---------------- -*/
   --answers-font-size: 18px;
@@ -157,8 +157,8 @@ hr {
 
 #pointer {
   margin: var(--pointer-margin);
-  font-style: italic;
-  font-family: 'Times New Roman'
+  font-family: 'Times New Roman';
+  font-size: 20px;
 }
 
 #code {
