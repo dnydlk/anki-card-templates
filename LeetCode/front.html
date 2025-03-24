@@ -19,14 +19,13 @@
       <!--- ----------- Front-------------- --->
       <div class="info-wrapper">
         <div id="deck">{{Deck}}</div>
-        <div id="from">{{from}}</div>
+        <div id="url">{{URL}}</div>
       </div>
-
       <div id="question">{{Question}}</div>
     </div>
 
     <script>
-      // !IMPORTANT: The BELOW script is for testing purposes only, don't put it in Anki
+      // ! IMPORTANT: The BELOW script is for testing purposes only, don't put it in Anki !
       // Function to replace text content
       function replaceTextContent(elementId, newText) {
         let element = document.getElementById(elementId)
@@ -35,26 +34,13 @@
         }
       }
       // Example replacements
-      replaceTextContent("deck", "Default Deck")
+      replaceTextContent("deck", "Example Lorem deck")
+      replaceTextContent("url", "url www.lorem.com")
       replaceTextContent(
         "question",
-        "Question duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        "Question lorem duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
       )
-      replaceTextContent("from", "Example SourceExample")
-      replaceTextContent(
-        "answers",
-        "Answer labore nisi id adipisicing amet pariatur elit exercitation proident incididunt culpa quis deserunt id exercitation."
-      )
-      replaceTextContent(
-        "eg",
-        "E.g. duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
-      )
-      replaceTextContent(
-        "code",
-        "Code duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
-      )
-      replaceTextContent("source", "Example SourceExample")
-      // !IMPORTANT: The ABOVE script is for testing purposes only, don't put it in Anki
+      // ! IMPORTANT: The ABOVE script is for testing purposes only, don't put it in Anki !
     </script>
   </body>
 </html>

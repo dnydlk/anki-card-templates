@@ -20,13 +20,13 @@
       <!--- ------------ Back ------------- --->
       <hr id="answer" />
 
-      <div id="answers">{{edit:Answer}}</div>
+      <div id="pointer">{{edit:hint:Pointer}}</div>
 
-      <div id="code">{{edit:Code}}</div>
+      <div id="answers">{{edit:hint:Answer}}</div>
 
-      <div id="eg">{{edit:E.g.}}</div>
+      <div id="code">{{edit:hint:Code}}</div>
 
-      <div id="source">{{Source}}</div>
+      <div id="reminder">{{edit:hint:Reminder}}</div>
 
       {{#Tags}}
       <div class="tags">{{Tags}}</div>
@@ -34,7 +34,7 @@
     </div>
 
     <script>
-      // !IMPORTANT: The BELOW script is for testing purposes only, don't put it in Anki
+      // ! IMPORTANT: The BELOW script is for testing purposes only, don't put it in Anki !
       // Function to replace text content
       function replaceTextContent(elementId, newText) {
         let element = document.getElementById(elementId)
@@ -43,26 +43,20 @@
         }
       }
       // Example replacements
-      replaceTextContent("deck", "Default Deck")
       replaceTextContent(
-        "question",
-        "Question duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        "pointer",
+        "Pointer lorem nisi nisi ad ex nulla ex Lorem anim sit in esse consectetur anim."
       )
-      replaceTextContent("from", "Example SourceExample")
       replaceTextContent(
         "answers",
-        "Answer labore nisi id adipisicing amet pariatur elit exercitation proident incididunt culpa quis deserunt id exercitation."
-      )
-      replaceTextContent(
-        "eg",
-        "E.g. duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        "Answer lorem labore nisi id adipisicing amet pariatur elit exercitation proident incididunt culpa quis deserunt id exercitation."
       )
       replaceTextContent(
         "code",
-        "Code duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
+        "Code lorem duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
       )
-      replaceTextContent("source", "Example SourceExample")
-      // !IMPORTANT: The ABOVE script is for testing purposes only, don't put it in Anki
+      replaceTextContent("reminder", "Example lorem esse proident irure fugiat laborum dolore fugiat duis.")
+      // ! IMPORTANT: The ABOVE script is for testing purposes only, don't put it in Anki !
 
       // Split hierarchical tags
       var tagsContainerEl = document.querySelectorAll(".tags > *")
