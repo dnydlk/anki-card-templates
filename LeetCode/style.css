@@ -157,6 +157,8 @@ hr {
 
 #pointer {
   margin: var(--pointer-margin);
+  font-style: italic;
+  font-family: 'Times New Roman'
 }
 
 #code {
