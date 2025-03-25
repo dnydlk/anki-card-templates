@@ -41,6 +41,10 @@
         "Question lorem duis veniam sit nisi excepteur ex nisi eu culpa ex sint nisi ullamco ut consequat."
       )
       // ! IMPORTANT: The ABOVE script is for testing purposes only, don't put it in Anki !
+
+      document.querySelector("#question img").addEventListener("click", () => {
+        window.open(document.querySelector("#url a").href, "_blank")
+      })
     </script>
   </body>
 </html>

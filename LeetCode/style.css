@@ -135,6 +135,10 @@
   line-height: var(--question-line-height);
 }
 
+#question img:hover {
+  cursor: pointer;
+}
+
 hr {
   margin: var(--hr-margin);
   border: 0.1px solid var(--hr-color);
@@ -157,7 +161,7 @@ hr {
 
 #pointer {
   margin: var(--pointer-margin);
-  font-family: 'Times New Roman';
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
 
