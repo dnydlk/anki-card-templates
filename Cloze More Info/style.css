@@ -21,7 +21,8 @@
   /*- ---------------- Cloze ----------------- -*/
   --cloze-font-size: 20px;
   --cloze-line-height: 1.3;
-  --cloze-font-color: #88c0d0;
+  /* --cloze-font-color: #88c0d0; */
+  --cloze-font-color: #406e84;
   --cloze-bg-color: transparent;
 
   /*- ---------------- From ------------------ -*/
